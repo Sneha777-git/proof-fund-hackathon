@@ -1,7 +1,7 @@
 # ProofFund frontend
-- [ ] Design system, brand, motion and landing page inspired by reference
-- [ ] Campaign discovery and detail views
-- [ ] Public information and proof verification
-- [ ] Donor, creator and organization workspaces
-- [ ] Creation, milestone, voting, dispute, refund and transaction demos
-- [ ] Profile/settings, routing and responsive verification
+- [x] Design system, brand, motion and landing page inspired by reference
+- [x] Campaign discovery and detail views
+- [x] Public information and proof verification
+- [x] Donor, creator and organization workspaces
+- [x] Creation, milestone, voting, dispute, refund and transaction demos
+- [x] Profile/settings, routing and responsive verification
