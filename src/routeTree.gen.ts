@@ -10,33 +10,305 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CreateRouteImport } from './routes/create'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as RefundsRouteImport } from './routes/refunds'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as TransactionsRouteImport } from './routes/transactions'
+import { Route as VerifyRouteImport } from './routes/verify'
+import { Route as CampaignIdRouteImport } from './routes/campaign.$id'
+import { Route as DashboardCreatorRouteImport } from './routes/dashboard.creator'
+import { Route as DashboardDonorRouteImport } from './routes/dashboard.donor'
+import { Route as DashboardOrganizationRouteImport } from './routes/dashboard.organization'
+import { Route as OrganizationCampaignsRouteImport } from './routes/organization.campaigns'
+import { Route as OrganizationReportsRouteImport } from './routes/organization.reports'
+import { Route as CampaignIdIndexRouteImport } from './routes/campaign.$id.index'
+import { Route as CampaignIdManageRouteImport } from './routes/campaign.$id.manage'
+import { Route as CampaignIdSubmitProofRouteImport } from './routes/campaign.$id.submit-proof'
+import { Route as CampaignIdDisputeMilestoneIdRouteImport } from './routes/campaign.$id.dispute.$milestoneId'
+import { Route as CampaignIdMilestoneMilestoneIdRouteImport } from './routes/campaign.$id.milestone.$milestoneId'
+import { Route as CampaignIdVoteMilestoneIdRouteImport } from './routes/campaign.$id.vote.$milestoneId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CreateRoute = CreateRouteImport.update({
+  id: '/create',
+  path: '/create',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundsRoute = RefundsRouteImport.update({
+  id: '/refunds',
+  path: '/refunds',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransactionsRoute = TransactionsRouteImport.update({
+  id: '/transactions',
+  path: '/transactions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerifyRoute = VerifyRouteImport.update({
+  id: '/verify',
+  path: '/verify',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignIdRoute = CampaignIdRouteImport.update({
+  id: '/campaign/$id',
+  path: '/campaign/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardCreatorRoute = DashboardCreatorRouteImport.update({
+  id: '/dashboard/creator',
+  path: '/dashboard/creator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardDonorRoute = DashboardDonorRouteImport.update({
+  id: '/dashboard/donor',
+  path: '/dashboard/donor',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardOrganizationRoute = DashboardOrganizationRouteImport.update({
+  id: '/dashboard/organization',
+  path: '/dashboard/organization',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizationCampaignsRoute = OrganizationCampaignsRouteImport.update({
+  id: '/organization/campaigns',
+  path: '/organization/campaigns',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OrganizationReportsRoute = OrganizationReportsRouteImport.update({
+  id: '/organization/reports',
+  path: '/organization/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampaignIdIndexRoute = CampaignIdIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => CampaignIdRoute,
+} as any)
+const CampaignIdManageRoute = CampaignIdManageRouteImport.update({
+  id: '/manage',
+  path: '/manage',
+  getParentRoute: () => CampaignIdRoute,
+} as any)
+const CampaignIdSubmitProofRoute = CampaignIdSubmitProofRouteImport.update({
+  id: '/submit-proof',
+  path: '/submit-proof',
+  getParentRoute: () => CampaignIdRoute,
+} as any)
+const CampaignIdDisputeMilestoneIdRoute =
+  CampaignIdDisputeMilestoneIdRouteImport.update({
+    id: '/dispute/$milestoneId',
+    path: '/dispute/$milestoneId',
+    getParentRoute: () => CampaignIdRoute,
+  } as any)
+const CampaignIdMilestoneMilestoneIdRoute =
+  CampaignIdMilestoneMilestoneIdRouteImport.update({
+    id: '/milestone/$milestoneId',
+    path: '/milestone/$milestoneId',
+    getParentRoute: () => CampaignIdRoute,
+  } as any)
+const CampaignIdVoteMilestoneIdRoute =
+  CampaignIdVoteMilestoneIdRouteImport.update({
+    id: '/vote/$milestoneId',
+    path: '/vote/$milestoneId',
+    getParentRoute: () => CampaignIdRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/create': typeof CreateRoute
+  '/explore': typeof ExploreRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/profile': typeof ProfileRoute
+  '/refunds': typeof RefundsRoute
+  '/settings': typeof SettingsRoute
+  '/transactions': typeof TransactionsRoute
+  '/verify': typeof VerifyRoute
+  '/campaign/$id': typeof CampaignIdRouteWithChildren
+  '/dashboard/creator': typeof DashboardCreatorRoute
+  '/dashboard/donor': typeof DashboardDonorRoute
+  '/dashboard/organization': typeof DashboardOrganizationRoute
+  '/organization/campaigns': typeof OrganizationCampaignsRoute
+  '/organization/reports': typeof OrganizationReportsRoute
+  '/campaign/$id/manage': typeof CampaignIdManageRoute
+  '/campaign/$id/submit-proof': typeof CampaignIdSubmitProofRoute
+  '/campaign/$id/': typeof CampaignIdIndexRoute
+  '/campaign/$id/dispute/$milestoneId': typeof CampaignIdDisputeMilestoneIdRoute
+  '/campaign/$id/milestone/$milestoneId': typeof CampaignIdMilestoneMilestoneIdRoute
+  '/campaign/$id/vote/$milestoneId': typeof CampaignIdVoteMilestoneIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/create': typeof CreateRoute
+  '/explore': typeof ExploreRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/profile': typeof ProfileRoute
+  '/refunds': typeof RefundsRoute
+  '/settings': typeof SettingsRoute
+  '/transactions': typeof TransactionsRoute
+  '/verify': typeof VerifyRoute
+  '/dashboard/creator': typeof DashboardCreatorRoute
+  '/dashboard/donor': typeof DashboardDonorRoute
+  '/dashboard/organization': typeof DashboardOrganizationRoute
+  '/organization/campaigns': typeof OrganizationCampaignsRoute
+  '/organization/reports': typeof OrganizationReportsRoute
+  '/campaign/$id/manage': typeof CampaignIdManageRoute
+  '/campaign/$id/submit-proof': typeof CampaignIdSubmitProofRoute
+  '/campaign/$id': typeof CampaignIdIndexRoute
+  '/campaign/$id/dispute/$milestoneId': typeof CampaignIdDisputeMilestoneIdRoute
+  '/campaign/$id/milestone/$milestoneId': typeof CampaignIdMilestoneMilestoneIdRoute
+  '/campaign/$id/vote/$milestoneId': typeof CampaignIdVoteMilestoneIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/create': typeof CreateRoute
+  '/explore': typeof ExploreRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/profile': typeof ProfileRoute
+  '/refunds': typeof RefundsRoute
+  '/settings': typeof SettingsRoute
+  '/transactions': typeof TransactionsRoute
+  '/verify': typeof VerifyRoute
+  '/campaign/$id': typeof CampaignIdRouteWithChildren
+  '/dashboard/creator': typeof DashboardCreatorRoute
+  '/dashboard/donor': typeof DashboardDonorRoute
+  '/dashboard/organization': typeof DashboardOrganizationRoute
+  '/organization/campaigns': typeof OrganizationCampaignsRoute
+  '/organization/reports': typeof OrganizationReportsRoute
+  '/campaign/$id/manage': typeof CampaignIdManageRoute
+  '/campaign/$id/submit-proof': typeof CampaignIdSubmitProofRoute
+  '/campaign/$id/': typeof CampaignIdIndexRoute
+  '/campaign/$id/dispute/$milestoneId': typeof CampaignIdDisputeMilestoneIdRoute
+  '/campaign/$id/milestone/$milestoneId': typeof CampaignIdMilestoneMilestoneIdRoute
+  '/campaign/$id/vote/$milestoneId': typeof CampaignIdVoteMilestoneIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/create'
+    | '/explore'
+    | '/how-it-works'
+    | '/profile'
+    | '/refunds'
+    | '/settings'
+    | '/transactions'
+    | '/verify'
+    | '/campaign/$id'
+    | '/dashboard/creator'
+    | '/dashboard/donor'
+    | '/dashboard/organization'
+    | '/organization/campaigns'
+    | '/organization/reports'
+    | '/campaign/$id/manage'
+    | '/campaign/$id/submit-proof'
+    | '/campaign/$id/'
+    | '/campaign/$id/dispute/$milestoneId'
+    | '/campaign/$id/milestone/$milestoneId'
+    | '/campaign/$id/vote/$milestoneId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/create'
+    | '/explore'
+    | '/how-it-works'
+    | '/profile'
+    | '/refunds'
+    | '/settings'
+    | '/transactions'
+    | '/verify'
+    | '/dashboard/creator'
+    | '/dashboard/donor'
+    | '/dashboard/organization'
+    | '/organization/campaigns'
+    | '/organization/reports'
+    | '/campaign/$id/manage'
+    | '/campaign/$id/submit-proof'
+    | '/campaign/$id'
+    | '/campaign/$id/dispute/$milestoneId'
+    | '/campaign/$id/milestone/$milestoneId'
+    | '/campaign/$id/vote/$milestoneId'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/create'
+    | '/explore'
+    | '/how-it-works'
+    | '/profile'
+    | '/refunds'
+    | '/settings'
+    | '/transactions'
+    | '/verify'
+    | '/campaign/$id'
+    | '/dashboard/creator'
+    | '/dashboard/donor'
+    | '/dashboard/organization'
+    | '/organization/campaigns'
+    | '/organization/reports'
+    | '/campaign/$id/manage'
+    | '/campaign/$id/submit-proof'
+    | '/campaign/$id/'
+    | '/campaign/$id/dispute/$milestoneId'
+    | '/campaign/$id/milestone/$milestoneId'
+    | '/campaign/$id/vote/$milestoneId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CreateRoute: typeof CreateRoute
+  ExploreRoute: typeof ExploreRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  ProfileRoute: typeof ProfileRoute
+  RefundsRoute: typeof RefundsRoute
+  SettingsRoute: typeof SettingsRoute
+  TransactionsRoute: typeof TransactionsRoute
+  VerifyRoute: typeof VerifyRoute
+  CampaignIdRoute: typeof CampaignIdRouteWithChildren
+  DashboardCreatorRoute: typeof DashboardCreatorRoute
+  DashboardDonorRoute: typeof DashboardDonorRoute
+  DashboardOrganizationRoute: typeof DashboardOrganizationRoute
+  OrganizationCampaignsRoute: typeof OrganizationCampaignsRoute
+  OrganizationReportsRoute: typeof OrganizationReportsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +320,195 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/create': {
+      id: '/create'
+      path: '/create'
+      fullPath: '/create'
+      preLoaderRoute: typeof CreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refunds': {
+      id: '/refunds'
+      path: '/refunds'
+      fullPath: '/refunds'
+      preLoaderRoute: typeof RefundsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transactions': {
+      id: '/transactions'
+      path: '/transactions'
+      fullPath: '/transactions'
+      preLoaderRoute: typeof TransactionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify': {
+      id: '/verify'
+      path: '/verify'
+      fullPath: '/verify'
+      preLoaderRoute: typeof VerifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/$id': {
+      id: '/campaign/$id'
+      path: '/campaign/$id'
+      fullPath: '/campaign/$id'
+      preLoaderRoute: typeof CampaignIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/creator': {
+      id: '/dashboard/creator'
+      path: '/dashboard/creator'
+      fullPath: '/dashboard/creator'
+      preLoaderRoute: typeof DashboardCreatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/donor': {
+      id: '/dashboard/donor'
+      path: '/dashboard/donor'
+      fullPath: '/dashboard/donor'
+      preLoaderRoute: typeof DashboardDonorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard/organization': {
+      id: '/dashboard/organization'
+      path: '/dashboard/organization'
+      fullPath: '/dashboard/organization'
+      preLoaderRoute: typeof DashboardOrganizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organization/campaigns': {
+      id: '/organization/campaigns'
+      path: '/organization/campaigns'
+      fullPath: '/organization/campaigns'
+      preLoaderRoute: typeof OrganizationCampaignsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/organization/reports': {
+      id: '/organization/reports'
+      path: '/organization/reports'
+      fullPath: '/organization/reports'
+      preLoaderRoute: typeof OrganizationReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campaign/$id/': {
+      id: '/campaign/$id/'
+      path: '/'
+      fullPath: '/campaign/$id/'
+      preLoaderRoute: typeof CampaignIdIndexRouteImport
+      parentRoute: typeof CampaignIdRoute
+    }
+    '/campaign/$id/manage': {
+      id: '/campaign/$id/manage'
+      path: '/manage'
+      fullPath: '/campaign/$id/manage'
+      preLoaderRoute: typeof CampaignIdManageRouteImport
+      parentRoute: typeof CampaignIdRoute
+    }
+    '/campaign/$id/submit-proof': {
+      id: '/campaign/$id/submit-proof'
+      path: '/submit-proof'
+      fullPath: '/campaign/$id/submit-proof'
+      preLoaderRoute: typeof CampaignIdSubmitProofRouteImport
+      parentRoute: typeof CampaignIdRoute
+    }
+    '/campaign/$id/dispute/$milestoneId': {
+      id: '/campaign/$id/dispute/$milestoneId'
+      path: '/dispute/$milestoneId'
+      fullPath: '/campaign/$id/dispute/$milestoneId'
+      preLoaderRoute: typeof CampaignIdDisputeMilestoneIdRouteImport
+      parentRoute: typeof CampaignIdRoute
+    }
+    '/campaign/$id/milestone/$milestoneId': {
+      id: '/campaign/$id/milestone/$milestoneId'
+      path: '/milestone/$milestoneId'
+      fullPath: '/campaign/$id/milestone/$milestoneId'
+      preLoaderRoute: typeof CampaignIdMilestoneMilestoneIdRouteImport
+      parentRoute: typeof CampaignIdRoute
+    }
+    '/campaign/$id/vote/$milestoneId': {
+      id: '/campaign/$id/vote/$milestoneId'
+      path: '/vote/$milestoneId'
+      fullPath: '/campaign/$id/vote/$milestoneId'
+      preLoaderRoute: typeof CampaignIdVoteMilestoneIdRouteImport
+      parentRoute: typeof CampaignIdRoute
+    }
   }
 }
 
+interface CampaignIdRouteChildren {
+  CampaignIdManageRoute: typeof CampaignIdManageRoute
+  CampaignIdSubmitProofRoute: typeof CampaignIdSubmitProofRoute
+  CampaignIdIndexRoute: typeof CampaignIdIndexRoute
+  CampaignIdDisputeMilestoneIdRoute: typeof CampaignIdDisputeMilestoneIdRoute
+  CampaignIdMilestoneMilestoneIdRoute: typeof CampaignIdMilestoneMilestoneIdRoute
+  CampaignIdVoteMilestoneIdRoute: typeof CampaignIdVoteMilestoneIdRoute
+}
+
+const CampaignIdRouteChildren: CampaignIdRouteChildren = {
+  CampaignIdManageRoute: CampaignIdManageRoute,
+  CampaignIdSubmitProofRoute: CampaignIdSubmitProofRoute,
+  CampaignIdIndexRoute: CampaignIdIndexRoute,
+  CampaignIdDisputeMilestoneIdRoute: CampaignIdDisputeMilestoneIdRoute,
+  CampaignIdMilestoneMilestoneIdRoute: CampaignIdMilestoneMilestoneIdRoute,
+  CampaignIdVoteMilestoneIdRoute: CampaignIdVoteMilestoneIdRoute,
+}
+
+const CampaignIdRouteWithChildren = CampaignIdRoute._addFileChildren(
+  CampaignIdRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CreateRoute: CreateRoute,
+  ExploreRoute: ExploreRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  ProfileRoute: ProfileRoute,
+  RefundsRoute: RefundsRoute,
+  SettingsRoute: SettingsRoute,
+  TransactionsRoute: TransactionsRoute,
+  VerifyRoute: VerifyRoute,
+  CampaignIdRoute: CampaignIdRouteWithChildren,
+  DashboardCreatorRoute: DashboardCreatorRoute,
+  DashboardDonorRoute: DashboardDonorRoute,
+  DashboardOrganizationRoute: DashboardOrganizationRoute,
+  OrganizationCampaignsRoute: OrganizationCampaignsRoute,
+  OrganizationReportsRoute: OrganizationReportsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
