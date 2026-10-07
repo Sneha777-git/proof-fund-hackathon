@@ -1346,7 +1346,7 @@ export function SubmitProofPage({
 
       const uploadResponse =
         await fetch(
-          "http://localhost:3001/api/ipfs/upload",
+          "https://YOUR-RENDER-URL.onrender.com/api/ipfs/upload",
           {
             method: "POST",
             body: formData,
