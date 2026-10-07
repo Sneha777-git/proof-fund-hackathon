@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+﻿import { useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -130,7 +130,7 @@ export function CreatePage() {
   return (
     <Workspace>
       <PageHeading
-        eyebrow="Creator workspace · Campaign draft"
+        eyebrow="Creator workspace Â· Campaign draft"
         title="Make your next idea accountable."
         description="A funding plan built around measurable milestones and verifiable evidence."
       />
@@ -236,7 +236,7 @@ export function CreatePage() {
           {step === 1 && (
             <>
               <label>
-                Funding goal (₹)
+                Funding goal (â‚¹)
                 <input
                   type="number"
                   required
@@ -316,7 +316,7 @@ export function CreatePage() {
                     </label>
 
                     <label className="w-32">
-                      Amount (₹)
+                      Amount (â‚¹)
 
                       <input
                         type="number"
@@ -400,7 +400,7 @@ export function CreatePage() {
                 role="status"
               >
                 {balanced
-                  ? "✓ Milestone allocation balanced"
+                  ? "âœ“ Milestone allocation balanced"
                   : "Milestone allocation must equal campaign goal."}
               </div>
             </>
@@ -432,7 +432,7 @@ export function CreatePage() {
           {step === 4 && (
             <>
               <div className="eyebrow">
-                Required security stake ·
+                Required security stake Â·
                 10%
               </div>
 
@@ -727,7 +727,7 @@ export function VotePage({
       </div>
 
       <PageHeading
-        eyebrow="Community governance · Demo vote"
+        eyebrow="Community governance Â· Demo vote"
         title={m.name}
         description="Review the evidence. Have a say in how funds are released."
         action={
@@ -754,7 +754,7 @@ export function VotePage({
               </h2>
 
               <span className="text-muted-foreground text-xs">
-                Demo time remaining ·
+                Demo time remaining Â·
                 01:42:18
               </span>
             </div>
@@ -988,13 +988,13 @@ export function DisputePage({
       </div>
 
       <PageHeading
-        eyebrow="Protection window · Demo scenario"
+        eyebrow="Protection window Â· Demo scenario"
         title={
           raised
             ? "Dispute raised. Funds stay protected."
             : "Approved does not mean released."
         }
-        description={`${m.name} · Approval scenario preview`}
+        description={`${m.name} Â· Approval scenario preview`}
         action={
           <Badge tone="warning">
             {raised
@@ -1093,7 +1093,7 @@ export function DisputePage({
           </Row>
 
           <Badge tone="muted">
-            Locked · Not released
+            Locked Â· Not released
           </Badge>
 
           <Button
@@ -1133,7 +1133,7 @@ export function RefundsPage() {
   return (
     <Workspace>
       <PageHeading
-        eyebrow="Donor protection · Demo scenario"
+        eyebrow="Donor protection Â· Demo scenario"
         title="Refunds"
         description="Review eligibility when a campaign cannot fulfill its milestones."
       />
@@ -1156,11 +1156,11 @@ export function RefundsPage() {
           </p>
 
           <Row label="Remaining refund pool">
-            ₹6,42,000
+            â‚¹6,42,000
           </Row>
 
           <Row label="Your contribution">
-            ₹7,500
+            â‚¹7,500
           </Row>
 
           <Row label="Refund eligibility">
@@ -1184,7 +1184,7 @@ export function RefundsPage() {
           </div>
 
           <div className="amount-large mt-4">
-            ₹4,820
+            â‚¹4,820
           </div>
 
           <Button
@@ -1213,7 +1213,7 @@ export function RefundsPage() {
               </Badge>
 
               <p className="mt-3">
-                ₹4,820 would be returned in
+                â‚¹4,820 would be returned in
                 this scenario. No real funds have
                 moved.
               </p>
@@ -1327,11 +1327,11 @@ export function SubmitProofPage({
        * Upload evidence:
        *
        * Browser
-       *   ↓
+       *   â†“
        * ProofFund backend
-       *   ↓
+       *   â†“
        * Pinata
-       *   ↓
+       *   â†“
        * IPFS
        */
       setStatus("uploading");
@@ -1346,7 +1346,7 @@ export function SubmitProofPage({
 
       const uploadResponse =
         await fetch(
-          "https://YOUR-RENDER-URL.onrender.com/api/ipfs/upload",
+          "https://proof-fund-hackathon-2.onrender.com/api/ipfs/upload",
           {
             method: "POST",
             body: formData,
@@ -1422,9 +1422,9 @@ export function SubmitProofPage({
   return (
     <Workspace>
       <PageHeading
-        eyebrow="Creator workspace · On-chain submission"
+        eyebrow="Creator workspace Â· On-chain submission"
         title="Let the evidence speak."
-        description={`${c?.title ?? "Campaign unavailable"} · Submit milestone proof for review.`}
+        description={`${c?.title ?? "Campaign unavailable"} Â· Submit milestone proof for review.`}
       />
 
       <div className="two-col">
@@ -1690,3 +1690,4 @@ export function SubmitProofPage({
     </Workspace>
   );
 }
+
