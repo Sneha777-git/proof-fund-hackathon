@@ -4,17 +4,17 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-  "dev": "vite dev",
-  "backend": "tsx backend/server.ts",
-  "build": "vite build",
-  "build:dev": "vite build --mode development",
-  "preview": "vite preview",
-  "lint": "eslint .",
-  "format": "prettier --write .",
-  "test": "vitest run",
-  "test:watch": "vitest",
-  "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia"
-},
+    "dev": "vite dev",
+    "backend": "tsx backend/server.ts",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia"
+  },
   "overrides": {
     "rolldown": "1.2.1"
   },
@@ -81,7 +81,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
-    "@lovable.dev/vite-tanstack-config": "^2.25.2",
     "@nomicfoundation/hardhat-ethers": "^4.2.0",
     "@nomicfoundation/hardhat-mocha": "^4.0.0",
     "@testing-library/jest-dom": "^6.6.0",
