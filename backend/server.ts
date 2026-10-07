@@ -5,7 +5,7 @@ import multer from "multer";
 import { PinataSDK } from "pinata";
 
 const app = express();
-const PORT = 3001;
+const PORT = Number(process.env.PORT) || 3001;
 
 const pinataJwt = process.env.PINATA_JWT;
 
